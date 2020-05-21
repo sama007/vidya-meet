@@ -1,25 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavBarVidya from './navbar/navbar';
+import Home from './home/home';
+import Conference from './conference/conference'
+import Room from "./conference/room";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+const NormalApp = () => (
+  <div>
+    <NavBarVidya />
+    <Switch>
+      <Route path="/conference">
+        <Conference />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+
+    </Switch>
+  </div>
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    <div id="meet"></div>
+    <Router>
+      <Switch>
+       <Route exact path="/conference/room/:meetingid">
+        <Room />
+      </Route>
+      <Route>
+        <NormalApp />
+      </Route>
+      </Switch>
+    </Router>
+    </React.Fragment>
   );
 }
 

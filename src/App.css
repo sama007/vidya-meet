@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+.vidya-nav-bar {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  height: 2.7rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu-vidya {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 32rem;
+}
+.menu-item-vidya {
+  margin: 0.5rem .5rem 0rem .5rem;
+  padding: 0.4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-vidya {
+  height: 2rem;
+  margin-top: 0.3rem;
+}
+.brand-vidya {
+  margin: 0.5rem 10rem 0rem 0.5rem;
+  padding: 0.4rem;
+}
+.link-vidya {
+  color: gray;
+  font-weight: 300;
+  font-size: larger;
+}
+
+.graytextheading {
+  color: gray;
+  font-weight: 300;
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+.conference-page-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 1rem 0rem 1rem;
+}
+.banner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.conf-create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conf-create-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.meeting-container {
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* #meet {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 400px;
+} */
