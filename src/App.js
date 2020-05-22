@@ -28,7 +28,6 @@ const NormalApp = () => (
 function App() {
   return (
     <React.Fragment>
-    <div id="meet"></div>
     <Router>
       <Switch>
        <Route exact path="/conference/room/:meetingid">
