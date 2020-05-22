@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useParams } from "react-router-dom";
 
 
 
@@ -12,7 +12,6 @@ export default function Room() {
         roomName: meetingid,
         width: window.screen.width,
         height: window.screen.height,
-        noSSL: true,
         parentNode: document.querySelector('#meet'),
     };
 
@@ -25,8 +24,8 @@ export default function Room() {
         };
         api = new window.JitsiMeetExternalAPI(domain, options);
         console.log(api);
-        api.setAudioInputDevice(audioTrack);
-        api.setVideoInputDevice(videotrack);
+        // api.setAudioInputDevice(audioTrack);
+        // api.setVideoInputDevice(videotrack);
         api.getAvailableDevices().then(
             devices => {
                 console.log(devices);
@@ -55,10 +54,10 @@ export default function Room() {
             } catch (error) {
                 console.log(error);
             }
-            // api.dispose();
+            api.dispose();
             console.log("api disposed");
         }
-    }, [])
+    })
 
     return (
         <div></div>
